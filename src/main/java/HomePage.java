@@ -11,7 +11,7 @@ public class HomePage {
     private WebDriverWait wait;
     private By termsAndConditions = By.xpath("//*[@id=\"__next\"]/div[5]/div");
     private By agreeButtonOnTermsAndConditions = By.xpath("//*[contains(@class,'_1UaVm')]");
-    private By buttonsOnHomePageHeader = By.xpath("//*[contains(@class,'css-17w4tfg')]");
+    private By buttonsOnHomePageHeader = By.xpath("//*[contains(@class,'css-1qk490')]");
     private By newsParentDiv = By.xpath("//*[contains(@class,'css-snbr68')]");
 
 
@@ -38,6 +38,7 @@ public class HomePage {
         for(WebElement div : parentDiv){
             WebElement currentDiv = div.findElement(By.xpath(".//a"));
             if(currentDiv.getText().equals(nameArticle)){
+                currentDiv.click()
                 isContains = true;
                 break;
             }
